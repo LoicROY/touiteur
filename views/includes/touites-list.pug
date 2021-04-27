@@ -1,0 +1,8 @@
+h1 Liste des touites
+
+ul.touites
+    each touite in touites
+        div
+            li= touite.content
+            a(href=`/touites/edit/${touite._id}` class='btnLink') Editer le touite
+            a(href=`/touites/${touite._id}` class='btnLink') Supprimer le touite

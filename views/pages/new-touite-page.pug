@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+
+  div.touite-form
+    form(method="post" action="/touites/new")
+      h1 Ecrire un touite
+      div
+        textarea(
+          name="content"
+          placeholder="Quoi de neuf ?")
+      
+      
+      div: button(type="submit") Valider
