@@ -1,0 +1,19 @@
+const app = require('../app');
+const { ports, ssl } = require(`../environment/${NODE_ENV}`);
+const http = require('http');
+const https = require('https');
+const { readFileSync } = require('fs');
+
+http.createServer((req, res) => {
+  // http://localhost:80/touites
+  // Non je redirige --> https://localhost:443/touites
+  const redirectUrl = `https://${req.headers.host.split(':')[0]}:${ports.https}${req.url}`;
+  res.writeHead(301, { 'Location': redirectUrl });
+  res.end();
+}).listen(ports.http);
+
+const cert = readFileSync(ssl.cert);
+const key = readFileSync(ssl.key);
+https
+  .createServer({ cert, key }, app)
+  .listen(ports.https);

@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+ssl/*
+!ssl/.gitkeep
+public/img/avatars/*
+public/img/avatars/default*
+environment/*
+!environment/*~

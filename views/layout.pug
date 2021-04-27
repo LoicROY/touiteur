@@ -1,0 +1,27 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="/static/favicon.png" type="image/png")
+    title TP Touiteur
+    link(rel="stylesheet" href="/static/css/style.css")
+    
+  body
+    include includes/header
+
+    section.messagesSection
+      if errors
+        ul.errors
+          each error in errors
+            li= error
+      
+      if success
+        ul.success
+          each successMsg in success
+            li= successMsg
+
+    div.wrap
+      block content
+
+    include includes/footer

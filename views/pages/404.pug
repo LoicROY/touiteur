@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+
+    div.error404
+        h1 Erreur 404, nous n'avons pas trouvé l'url recherchée !
+        p= `url demandée => ${protocol}://${host}${url}`
+        img(src="/static/img/monstre-vert-404.jpg", alt="green monster 404")

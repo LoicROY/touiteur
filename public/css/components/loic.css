@@ -1,0 +1,44 @@
+.errors {
+    width: 300px;
+    font-size: 1rem;
+    color: red;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.success {
+    width: 300px;
+    font-size: 1rem;
+    color: green;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.touites div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 3px 0px;
+}
+
+.btnLink {
+    color: white;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error404 {
+    text-align: center;
+}
+
+.error404 img {
+    width: 20%;
+}
