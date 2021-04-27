@@ -1,5 +1,5 @@
 const app = require('../app');
-const { ports, ssl } = require(`../environment/${NODE_ENV}`);
+const { ports, ssl } = require(`../environnement/${process.env.NODE_ENV}`);
 const http = require('http');
 const https = require('https');
 const { readFileSync } = require('fs');

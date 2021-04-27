@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  div.users-form
+    if signup
+      h1 Formulaire d'inscription
+    else
+      h1 Formulaire de connexion
+
+    form(method="post" action=(signup?"/users/signup":"/users/signin"))
+      if signup
+        div
+          label Pseudo
+          input(type="text" name="username" autofocus autocomplete="off")
+      div 
+        label Email
+        input(type="email" name="email" autocomplete="off")
+      div
+        label Mot de passe
+        input(type="password" name="password" autocomplete="off")
+      
+      div
+        if signup
+          button(type="submit") Créer mon profil
+        else
+          button(type="submit") Me connecter

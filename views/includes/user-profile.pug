@@ -1,0 +1,27 @@
+div
+  form(
+    id="formAvatar"
+    action="/users/update/image"
+    method="post"
+    enctype="multipart/form-data"
+  )
+    input(type="file" name="inputAvatar" hidden)
+    img(
+      src=user.avatar
+      width="100"
+      height="100"
+      onerror="this.src='/static/img/avatars/default-avatar.svg'")
+    script(src="/static/js/user-profile/avatar-event.js")
+
+  div: p #{user.username} (#{user.email})
+
+  div: a.bt-follow(href="#") follow
+
+div
+  strong Touites
+  br
+  span= touites.length
+div
+  strong Follows
+  br
+  span= user.follows.length

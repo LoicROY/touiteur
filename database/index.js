@@ -6,7 +6,7 @@ const { db: {
   host,
   name,
   options,
-}} = require(`../environment/${NODE_ENV}`);
+}} = require(`../environnement/${process.env.NODE_ENV}`);
 
 mongoose
   .connect(

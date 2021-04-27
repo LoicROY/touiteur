@@ -5,8 +5,8 @@
   "main": ".bin/www",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=developpement nodemon ./bin/www",
-    "start:prod": "NODE_ENV=production node ./bin/www"
+    "start": "cross-env NODE_ENV=developpement nodemon ./bin/www",
+    "start:prod": "cross-env NODE_ENV=production node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,10 @@
   "homepage": "https://github.com/LoicROY/touiteur#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
     "mongoose": "^5.12.5",
     "pug": "^3.0.2"
   },
