@@ -1,3 +1,16 @@
-nav
-  div.main-menu
-    
+if connectedUser
+  nav
+    //- RECHERCHE D'UN PROFIL
+    div.search-profile
+      input.search-profile(type="text", placeholder="Chercher un profil")
+      div.search-results
+    //- BTS TOUITE ET DECONNEXION
+    div.main-menu
+      a.bt-touite(href="/touites/new") Touite
+      a(href="/users/signout") Se déconnecter
+else
+  nav
+    //- BTS CONNEXION/INSCRIPTION
+    div.cnx-menu
+      a(href="/users/signin") Se connecter
+      a(href="/users/signup") S'inscrire
